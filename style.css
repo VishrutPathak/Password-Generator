@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0B2E33;
+    color: #B8E3E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('Bluebg1.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(11, 46, 51, 0.7); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box {
+    width: 100%;
+    max-width: 500px;
+    background-color: #4F7C82;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover .box {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.input input, #Password {
+    width: 96%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #4F7C82;
+    background-color: #B8E3E9;
+    color: #0B2E33;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input input:focus, #Password:focus {
+    border-color: #0B2E33;
+    background-color: #A7C5C7; 
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4F7C82;
+    color: #B8E3E9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #0B2E33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+input::placeholder {
+    color: #0B2E33;
+    opacity: 0.8;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
